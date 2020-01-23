@@ -4,7 +4,11 @@ $(document).ready(function() {
     var year = parseInt($("input#year").val());
 
     var leapYear = function(year) {
-      return false;
+      if (year % 4 === 0) {
+        return true;
+      } else {
+        return false;
+      }
     };
 
     var result = leapYear(year);
